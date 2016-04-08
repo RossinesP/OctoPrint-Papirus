@@ -23,11 +23,11 @@ class PapirusPlugin(octoprint.plugin.StartupPlugin, octoprint.plugin.ProgressPlu
         start_y = screen_size_x / 2
         end_y = start_y + 20
         draw.rectangle((start_x, start_y, end_x, end_y), 1, 0)
-        fillWidth = im.width * progress / 100
+        fillWidth = image.width * progress / 100
         draw.rectangle((start_x, start_y, fillWidth, end_y), 0, 0)
         
         # Draw text
-        draw.text((0, 0), path, font=font, fill=BLACK)
+        draw.text((0, 0), path, font=self.font, fill=0)
 
         del draw
 
