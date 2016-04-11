@@ -33,10 +33,9 @@ class PapirusPlugin(octoprint.plugin.StartupPlugin, octoprint.plugin.ProgressPlu
 
         papirus.display(image)
         papirus.update()
-        pass
 
     def on_slicing_progress(storage, path, progress):
-        pass
+        on_print_progress(storage, path, progress)
 
 __plugin_name__ = "Papirus"
 __plugin_implementation__ = PapirusPlugin()
