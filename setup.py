@@ -14,11 +14,11 @@ plugin_package = "octoprint_papirus"
 plugin_name = "OctoPrint-Papirus"
 
 # The plugin's version. Can be overwritten within OctoPrint's internal data via __plugin_version__ in the plugin module
-plugin_version = "0.1.0"
+plugin_version = "0.1.4"
 
 # The plugin's description. Can be overwritten within OctoPrint's internal data via __plugin_description__ in the plugin
 # module
-plugin_description = """TODO"""
+plugin_description = """Display slice and print progress on a RPi PaPiRus display"""
 
 # The plugin's author. Can be overwritten within OctoPrint's internal data via __plugin_author__ in the plugin module
 plugin_author = "Pierre Rossines"
@@ -33,7 +33,7 @@ plugin_url = "https://github.com/RossinesP/OctoPrint-Papirus"
 plugin_license = "AGPLv3"
 
 # Any additional requirements besides OctoPrint should be listed here
-plugin_requires = []
+plugin_requires = ["Pillow==2.6.1"]
 
 ### --------------------------------------------------------------------------------------------------------------------
 ### More advanced options that you usually shouldn't have to touch follow after this point
@@ -62,7 +62,7 @@ additional_setup_parameters = {}
 ########################################################################################################################
 
 from setuptools import setup
-
+  
 try:
 	import octoprint_setuptools
 except:
